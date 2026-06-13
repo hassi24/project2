@@ -63,9 +63,9 @@ def get_api_key() -> str:
     then from environment variables.
     """
     try:
-        return st.secrets["NEWSAPI_KEY"]
+        return st.secrets["api_key"]
     except Exception:
-        return os.getenv("NEWSAPI_KEY", "")
+        return os.getenv("api_key", "")
 
 
 def safe_get_source(article: dict) -> str:
